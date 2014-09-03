@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/spacelab.min.css" type="text/css" />
+		<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<style>
+			td {
+				vertical-align: middle !important;
+			}
+		</style>
+	</head>
+	<body>
+			<table align="center" class="table table-bordered">
+				<tr>
+					<td rowspan="6"><label>Time Sense</label></td>
+					<td width="300">
+						<label>Punctuality in the Class</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="A1" id="A1-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A1" id="A1-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A1" id="A1-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A1" id="A1-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A1" id="A1-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Regularity in Taking Classes</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="A2" id="A2-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A2" id="A2-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A2" id="A2-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A2" id="A2-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A2" id="A2-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Students&apos; Attendance</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="A3" id="A3-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A3" id="A3-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A3" id="A3-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A3" id="A3-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A3" id="A3-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Course Completion in Time</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="A4" id="A4-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A4" id="A4-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A4" id="A4-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A4" id="A4-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A4" id="A4-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Organization of Activities (class, tests, assignments, ...)</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="A5" id="A5-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A5" id="A5-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A5" id="A5-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A5" id="A5-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A5" id="A5-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Arrangements Made in Case of Absence</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="A6" id="A6-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A6" id="A6-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A6" id="A6-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A6" id="A6-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="A6" id="A6-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr><td colspan="3">&nbsp;</td></tr>
+				<tr>
+					<td rowspan="8"><label>Subject Command<label></td>
+					<td>
+						<label>Focus on Syllabi</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B1" id="B1-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B1" id="B1-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B1" id="B1-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B1" id="B1-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B1" id="B1-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Self Confidence</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B2" id="B2-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B2" id="B2-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B2" id="B2-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B2" id="B2-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B2" id="B2-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Communication Skills</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B3" id="B3-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B3" id="B3-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B3" id="B3-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B3" id="B3-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B3" id="B3-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Conducting Discussions</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B4" id="B4-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B4" id="B4-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B4" id="B4-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B4" id="B4-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B4" id="B4-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Teaching the Subject Matter</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B5" id="B5-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B5" id="B5-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B5" id="B5-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B5" id="B5-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B5" id="B5-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Delivery of Structured Lectures</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B6" id="B6-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B6" id="B6-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B6" id="B6-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B6" id="B6-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B6" id="B6-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Linking Studies to Real Life</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B7" id="B7-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B7" id="B7-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B7" id="B7-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B7" id="B7-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B7" id="B7-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Refers to Latest Developments</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="B8" id="B8-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B8" id="B8-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B8" id="B8-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B8" id="B8-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="B8" id="B8-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr><td colspan="3">&nbsp;</td></tr>
+				<tr>
+					<td rowspan="6"><label>Teaching Methods/Aids</label></td>
+					<td width="250">
+						<label>Use of Aids(PPT/OHP/Blackboard)</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="C1" id="C1-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C1" id="C1-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C1" id="C1-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C1" id="C1-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C1" id="C1-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Handling of Board</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="C2" id="C2-1" value="1" />Below Cverage
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C2" id="A2-2" value="2" />Cverage
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C2" id="C2-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C2" id="C2-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C2" id="C2-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Use of Innovative Methods</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="C3" id="C3-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C3" id="C3-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C3" id="C3-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C3" id="C3-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C3" id="C3-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Explaination of Answers for Tests</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="C4" id="C4-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C4" id="C4-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C4" id="C4-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C4" id="C4-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C4" id="C4-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Shows Evaluated Answer Books to Students</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="C5" id="C5-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C5" id="C5-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C5" id="C5-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C5" id="C5-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C5" id="C5-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Makes Sure He/She is Being Understood</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="C6" id="C6-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C6" id="C6-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C6" id="C6-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C6" id="C6-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="C6" id="C6-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr><td colspan="3">&nbsp;</td></tr>
+				<tr>
+					<td rowspan="8"><label>Helping Attitude<label></td>
+					<td>
+						<label>Helping Various Interests of Students</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D1" id="D1-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D1" id="D1-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D1" id="D1-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D1" id="D1-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D1" id="D1-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Providing Additional Study Materials</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D2" id="D2-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D2" id="D2-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D2" id="D2-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D2" id="D2-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D2" id="D2-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Help Students Irrespective of Ethnicity/Background</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D3" id="D3-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D3" id="D3-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D3" id="D3-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D3" id="D3-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D3" id="D3-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Help Students Irrespective of Gender</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D4" id="D4-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D4" id="D4-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D4" id="D4-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D4" id="D4-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D4" id="D4-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Help Students Facing Physical/Emotional/Learning Challenges</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D5" id="D5-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D5" id="D5-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D5" id="D5-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D5" id="D5-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D5" id="D5-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Approach Towards Developing Professional Skills</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D6" id="D6-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D6" id="D6-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D6" id="D6-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D6" id="D6-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D6" id="D6-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Help Students in Realizing Career Goals</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D7" id="D7-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D7" id="D7-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D7" id="D7-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D7" id="D7-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D7" id="D7-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Help Students in Realizing Strengths and Weaknesses</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="D8" id="D8-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D8" id="D8-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D8" id="D8-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D8" id="D8-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="D8" id="D8-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr><td colspan="3">&nbsp;</td></tr>
+				<tr>
+					<td rowspan="6"><label>Lab Interaction</label></td>
+					<td width="250">
+						<label>Regular Checking of Records</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="E1" id="E1-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E1" id="E1-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E1" id="E1-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E1" id="E1-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E1" id="E1-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Availability for Whole Duration of Lab</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="E2" id="E2-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E2" id="E2-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E2" id="E2-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E2" id="E2-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E2" id="E2-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Helping Students in Conducting Experiments</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="E3" id="E3-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E3" id="E3-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E3" id="E3-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E3" id="E3-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E3" id="E3-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Helping Students Understand the Background of Experiments</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="E4" id="E4-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E4" id="E4-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E4" id="E4-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E4" id="E4-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E4" id="E4-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Follows Open Ended Approaches for Experiments</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="E5" id="E5-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E5" id="E5-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E5" id="E5-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E5" id="E5-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E5" id="E5-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Conducting Lab Seminars and GDs</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="E6" id="E6-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E6" id="E6-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E6" id="E6-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E6" id="E6-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="E6" id="E6-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr><td colspan="3">&nbsp;</td></tr>
+				<tr>
+					<td rowspan="7"><label>Class Control<label></td>
+					<td>
+						<label>Control Mechanism for Conducting Classes</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="F1" id="F1-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F1" id="F1-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F1" id="F1-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F1" id="F1-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F1" id="F1-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Students&apos; Participation in Class</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="F2" id="F2-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F2" id="F2-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F2" id="F2-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F2" id="F2-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F2" id="F2-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Skills of Addressing Inappropriate Behaviour of Students</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="F3" id="F3-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F3" id="F3-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F3" id="F3-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F3" id="F3-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F3" id="F3-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Tendency of Inviting Opinions/Questions from Students</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="F4" id="F4-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F4" id="F4-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F4" id="F4-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F4" id="F4-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F4" id="F4-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Enhances Learning by Judicious Reinforcement Mechanism</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="F5" id="F5-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F5" id="F5-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F5" id="F5-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F5" id="F5-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F5" id="F5-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Inspires Students for Ethical Conduct</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="F6" id="F6-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F6" id="F6-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F6" id="F6-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F6" id="F6-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F6" id="F6-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Acts as a Role Model</label>
+					</td>
+					<td>
+						<label class="radio-inline">
+							<input type="radio" name="F7" id="F7-1" value="1" />Below Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F7" id="F7-2" value="2" />Average
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F7" id="F7-3" value="3" />Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F7" id="F7-4" value="4" />Very Good
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="F7" id="F7-5" value="5" />Excellent
+						</label>
+					</td>
+				</tr>
+				<tr><td colspan="3">&nbsp;</td></tr>
+				<tr>
+					<td colspan="3" align="center"><button class="btn btn-success">Submit Feedback</button></td>
+				</tr>
+			</table>
+	</body>
+</html>

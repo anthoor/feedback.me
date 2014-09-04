@@ -64,6 +64,23 @@ $student = new Student( $_SESSION['student'] );
 				<h2><span class="glyphicon glyphicon-home"></span> Malabar Institute of Technology <small>Anjarakandy</small></h2>
 			</div>
 		</div>
+		<?php
+		if( isset( $_SESSION['feedback']) ) {
+		?>
+			<div class="container">
+				<div class="well">
+					<h5 class="<?php
+					if(count(explode(" ",$_SESSION['feedback'])) == 3) {
+						echo "alert alert-success";
+					} else {
+						echo "alert alert-danger";
+					}
+					?>"><?php echo $_SESSION['feedback']; unset($_SESSION['feedback']); ?></h5>
+				</div>
+			</div>
+		<?php
+		}
+		?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">

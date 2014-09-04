@@ -31,7 +31,11 @@ foreach ($_POST as $key => $value) {
 	}
 }
 
-$fb->insertFeedback( $sid, $tid, $cols, $vals );
+if( $fb->insertFeedback( $sid, $tid, $cols, $vals ) ) {
+	$_SESSION['feedback'] = "Feedback Successfully Recorded.";
+} else {
+	$_SESSION['feedback'] = "Feedback was not Recorded Correctly. Try Again.";
+}
 
 header("Location:/user/")
 ?>

@@ -24,7 +24,7 @@ foreach ($_POST as $key => $value) {
 		$i += 1;
 		$cols .= $key;
 		$vals .= $value;
-		if( $i < 41 ) {
+		if( $i < 42 ) {
 			$cols .= ",";
 			$vals .= ",";
 		}

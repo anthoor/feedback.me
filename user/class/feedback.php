@@ -63,8 +63,8 @@ class Feedback {
 			$i += 1;
 			$d .= "i";
 		}
-		$v .= "?)";
-		$d .= "i";
+		$v .= "?,?)";
+		$d .= "is";
 
 
 		$query = "INSERT INTO feedback $cols VALUES $v";

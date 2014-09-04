@@ -43,6 +43,19 @@ class Student {
 	public function getBatch() {
 		return $this->batch;
 	}
+
+	public function getBatchID() {
+		$db = new mysqli ( DB_HOST, DB_USER, DB_PASS, DB_NAME );
+		$id = $this->id;
+
+		$query = "SELECT batch_id FROM student WHERE student_id = ?";
+		$statement = $db->prepare( $query );
+		$statement->bind_param( "i", $id );
+		$statement->bind_result( $batch );
+		$statement->execute();
+		$statement->fetch();
+		return $batch;
+	}
 	
 	public function getID() {
 		return $this->id;

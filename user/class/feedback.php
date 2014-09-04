@@ -37,10 +37,10 @@ class Feedback {
 	public function getSubjectsTeachers() {
 		$db = new mysqli( DB_HOST, DB_USER, DB_PASS, DB_NAME );
 
-		$query = "SELECT subject.subject_name, faculty.faculty_name, teaches.t_id FROM student, subject, faculty, semester, teaches WHERE semester.sem_id = ? AND student.student_id = ? AND subject.sem_id = semester.sem_id AND teaches.sub_id = subject.subject_id AND faculty.faculty_id = teaches.faculty_id";
+		$query = "SELECT subject.subject_name, faculty.faculty_name, teaches.t_id FROM subject, faculty, teaches WHERE teaches.batch_id = ? AND teaches.sub_id IN (SELECT subject.subject_id FROM subject WHERE subject.sem_id = ?) AND teaches.faculty_id = faculty.faculty_id AND teaches.sub_id = subject.subject_id";
 		$statement = $db->prepare( $query );
-		$sid = $this->student->getID();
-		$statement->bind_param( "ii", $this->semester, $sid );
+		$bid = $this->student->getBatchID();
+		$statement->bind_param( "ii", $bid, $this->semester );
 		$statement->bind_result( $sub, $fac, $tid );
 		$statement->execute();
 		$result = array();

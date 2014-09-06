@@ -48,6 +48,7 @@ if( !isset( $_SESSION['auth'] ) || !$_SESSION['auth'] == "OK" || !isset( $_SESSI
 							<ul class="dropdown-menu">
 								<li><a href="#">Create Batch</a></li>
 								<li><a href="#">Assign Subjects</a></li>
+								<li><a href="#">Consolidated Feedback</a></li>
 							</ul>
 						</li>
 						<li>

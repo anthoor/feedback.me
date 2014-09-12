@@ -3,14 +3,14 @@
 session_start();
 
 if( !isset( $_SESSION['auth'] ) || !$_SESSION['auth'] == "OK" || !isset( $_SESSION['admin'] ) ) {
-	header( "Location:/" );
+	header( "Location:/admin/" );
 }
 
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Feedback : Home</title>
+		<title>Admin : Home</title>
 		<link rel="stylesheet" href="/css/spacelab.min.css" type="text/css" />
 		<script src="/js/jquery.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
@@ -29,12 +29,12 @@ if( !isset( $_SESSION['auth'] ) || !$_SESSION['auth'] == "OK" || !isset( $_SESSI
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/user">Feedback</a>
+					<a class="navbar-brand" href="/admin/">Feedback</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="/user">
+							<a href="/admin/">
 								<span class="glyphicon glyphicon-home"></span>
 								Home
 							</a>
@@ -48,7 +48,7 @@ if( !isset( $_SESSION['auth'] ) || !$_SESSION['auth'] == "OK" || !isset( $_SESSI
 							<ul class="dropdown-menu">
 								<li><a href="#">Create Batch</a></li>
 								<li><a href="#">Assign Subjects</a></li>
-								<li><a href="#">Consolidated Feedback</a></li>
+								<li><a href="consolidated.php">Consolidated Feedback</a></li>
 							</ul>
 						</li>
 						<li>

@@ -3,7 +3,11 @@
 session_start();
 
 if( isset( $_SESSION['auth']) && $_SESSION['auth'] == "OK" ) {
-	header( "Location:user/" );
+	if( isset( $_SESSION['student'] ) ) {
+		header( "Location:user/" );
+	} else if( isset( $_SESSION['admin'] ) ) {
+		header( "Location:admin/" );
+	}
 }
 
 ?>

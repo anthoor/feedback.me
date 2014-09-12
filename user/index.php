@@ -4,7 +4,7 @@ session_start();
 
 require_once 'class/student.php';
 
-if( !isset( $_SESSION['auth']) || !$_SESSION['auth'] == "OK" ) {
+if( !isset( $_SESSION['auth']) || !$_SESSION['auth'] == "OK" || !isset($_SESSION['student']) ) {
 	header( "Location:/" );
 }
 

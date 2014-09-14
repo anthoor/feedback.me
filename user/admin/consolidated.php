@@ -82,98 +82,6 @@ $admin = new Admin($_SESSION['admin']);
 				xmlhttp.open( "GET", URL, true );
 				xmlhttp.send();
 			}
-
-			function loadSemesters() {
-				var xmlhttp;
-				if (window.XMLHttpRequest) {
-					xmlhttp=new XMLHttpRequest();
-				} else {
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				
-				xmlhttp.onreadystatechange=function() {
-					if( xmlhttp.readyState == 4 && xmlhttp.status == 200 ) {
-						var response = xmlhttp.responseText;
-						if( response != "NULL" ) {
-							var rows = response.split(":::");
-							var print = "<div class=\"form-group\">\n<label for=\"sem\">Semester</label>\n<select name=\"sem\" id=\"sem\" class=\"form-control\" onChange=\"loadSubjects();\">\n<option value=\"-1\">Select Semester</option>\n";
-							for( i in rows ) {
-								var cols = rows[i].split("---");
-								print += "<option value=\"" + cols[0] + "\">" + cols[1] + "</option>\n";
-							}
-							print += "</select>\n</div>";
-							document.getElementById('sem-div').innerHTML = print;
-						} else {
-							var print = "<div class=\"form-group\">\n<label for=\"sem\">Semester</label>\n<select name=\"sem\" id=\"sem\" class=\"form-control\">\n<option value=\"-1\">No Semesters in this Batch</option>\n</select>\n</div>";
-							document.getElementById('sem-div').innerHTML = print;
-						}
-					}
-				}
-				var select = document.getElementById('crs');
-				var URL = "ajax.php?op=GetSem&val="+select.options[select.selectedIndex].value;
-				xmlhttp.open( "GET", URL, true );
-				xmlhttp.send();
-			}
-
-			function loadSubjects() {
-				var xmlhttp;
-				if (window.XMLHttpRequest) {
-					xmlhttp=new XMLHttpRequest();
-				} else {
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				
-				xmlhttp.onreadystatechange=function() {
-					if( xmlhttp.readyState == 4 && xmlhttp.status == 200 ) {
-						var response = xmlhttp.responseText;
-						if( response != "NULL" ) {
-							var rows = response.split(":::");
-							var print = "<div class=\"form-group\">\n<label for=\"sub\">Subject</label>\n<select name=\"sub\" id=\"sub\" class=\"form-control\" onChange=\"loadFeedbacks();\">\n<option value=\"-1\">Select Subject</option>\n";
-							for( i in rows ) {
-								var cols = rows[i].split("---");
-								print += "<option value=\"" + cols[0] + "\">" + cols[1] + "</option>\n";
-							}
-							print += "</select>\n</div>";
-							document.getElementById('sub-div').innerHTML = print;
-						} else {
-							var print = "<div class=\"form-group\">\n<label for=\"sub\">Subject</label>\n<select name=\"sub\" id=\"sub\" class=\"form-control\">\n<option value=\"-1\">No Subjects in this Semester</option>\n</select>\n</div>";
-							document.getElementById('sub-div').innerHTML = print;
-						}
-					}
-				}
-				var select = document.getElementById('sem');
-				var URL = "ajax.php?op=GetSub&val="+select.options[select.selectedIndex].value;
-				xmlhttp.open( "GET", URL, true );
-				xmlhttp.send();
-			}
-
-			function loadFeedbacks() {
-				var xmlhttp;
-				if (window.XMLHttpRequest) {
-					xmlhttp=new XMLHttpRequest();
-				} else {
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				
-				xmlhttp.onreadystatechange=function() {
-					if( xmlhttp.readyState == 4 && xmlhttp.status == 200 ) {
-						var response = xmlhttp.responseText;
-						if( response != "NULL" ) {
-							var URL = "fbdisplay.php?data="+response;
-							var print = "<iframe src=\""+URL+"\" style=\"width:80%;height:350px;\"></iframe>";
-							document.getElementById('fb-div').innerHTML = print;
-						} else {
-							var print = "No Feedback";
-							document.getElementById('fb-div').innerHTML = print;
-						}
-					}
-				}
-				var select1 = document.getElementById('sub');
-				var select2 = document.getElementById('batch');
-				var URL = "ajax.php?op=GetFb&sub="+select1.options[select1.selectedIndex].value+"&batch="+select2.options[select2.selectedIndex].value;
-				xmlhttp.open( "GET", URL, true );
-				xmlhttp.send();
-			}
 		</script>
 		<style>
 			body {
@@ -183,10 +91,6 @@ $admin = new Admin($_SESSION['admin']);
 
 			.error {
 				color:#f00 !important;
-			}
-
-			#fb-div {
-				text-align:center;
 			}
 		</style>
 	</head>
@@ -213,7 +117,7 @@ $admin = new Admin($_SESSION['admin']);
 							<ul class="dropdown-menu">
 								<li><a href="#">Create Batch</a></li>
 								<li><a href="#">Assign Subjects</a></li>
-								<li><a href="consolidated.php">Consolidated Feedback</a></li>
+								<li><a href="consolidated">Consolidated Feedback</a></li>
 							</ul>
 						</li>
 						<li>
@@ -243,12 +147,6 @@ $admin = new Admin($_SESSION['admin']);
 				<div id="course-div">
 				</div>
 				<div id="batch-div">
-				</div>
-				<div id="sem-div">
-				</div>
-				<div id="sub-div">
-				</div>
-				<div id="fb-div">
 				</div>
 			</div>
 		</div>
